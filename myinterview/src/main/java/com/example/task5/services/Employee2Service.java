@@ -33,4 +33,8 @@ public class Employee2Service {
 		return employee2Repository.getStatisticsByGender();
 
 	}
+
+	public void save(Employee2 e) {
+		employee2Repository.save(e);
+	}
 }

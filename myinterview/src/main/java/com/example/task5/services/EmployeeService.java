@@ -33,4 +33,12 @@ public class EmployeeService {
 		return employeeRepository.getStatisticsByGender();
 
 	}
+
+	public Employee save(Employee e) {
+		return employeeRepository.save(e);
+	}
+
+	public void deleteById(Long id) {
+		employeeRepository.deleteById(id);
+	}
 }

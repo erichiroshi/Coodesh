@@ -3,6 +3,8 @@ package com.example.task5.entities;
 import java.math.BigDecimal;
 import java.time.LocalDate;
 
+import org.springframework.context.annotation.Profile;
+
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
@@ -11,6 +13,7 @@ import jakarta.persistence.Table;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+@Profile("dev")
 @NoArgsConstructor
 @Data
 @Entity
