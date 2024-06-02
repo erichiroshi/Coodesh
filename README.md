@@ -1,37 +1,58 @@
 ## README
 
-
-## What is this repository for?
-1. This repository contains some code. It might be compiling or not :)
-
-### Before you start
-
-- The project must use the specific language in the assessment. For example: Python, R, Scala, and others;
-- Consider the assessment deadline starting from the beginning of the test. If you have been invited to take the test and cannot complete it within this period, notify the person who invited you to receive instructions on what to do.
-- Document the entire investigation process for the development of the activity (README.md in your repository); the results of these tasks are as important as your thought process and decisions as you complete them, so try to document and present your hypotheses and decisions as much as possible.
-
-## Contribution guidelines and Tips
-
-1. All tips and contributions are welcome. But be aware that existing errors might not be an accident. We would appreciate if you let us know anything that you realize during the exam. We expect that and it could raise your interview evaluation up.
-
-## Repository README
-
-- Should contain the project title
-- A project description in a sentence
-- Must include a list of languages, frameworks, and/or technologies used
-- How to install and use the project (instructions)
-- Don't forget the [.gitignore](https://www.toptal.com/developers/gitignore)
-- If you are using a personal GitHub, reference that it is a challenge by Coodesh:
-
+# coodesh/digiage-challenge-20240402
 > This is a challenge by [Coodesh](https://coodesh.com/)
 
-## Finalization and Presentation Instructions
+Desafio para habilidades como Back-end da coodesh :)
 
-1. Add the link to the repository with your solution to the test
-2. Add the link to the presentation of your project in the README.md.
-3. Check if the README is good and make the final commit in your repository;
-4. Send and await instructions to proceed. Success and good luck. =)
+## Tecnologias Utilizadas
+- Java 1.6
+- Spring
+- Lombok
+- JPA
+- H2
+- AWS S3
+- REST
+- POSTMAN
 
-## Support
+## Como rodar as task
+- task1 até task4 - rodar a aplicação java  
+- task5 - subir uma aplicação spring boot app
 
-Use [our community](https://discord.gg/rdXbEvjsWu) to ask questions about the process or send a message directly to a specialist in the platform chat.
+### TASK5
+- task 5 tem dois perfis
+
+-- test:
+1. roda com banco de dados H2, com banco de dados populados de acordo com o arquivo import.sql;
+2. é possível adicionar e remover employee da tabela;
+3. caminhos:
+- get    /employees - retorna todos os employees
+- get    /employees/countEmployeesByGender - retorna quantidade de funcionários por sexo
+- get    /employees/getBirthYearStatisticsByGender - retorna quantidade de funcionários por sexo de acordo com o ano que nasceu
+- get    /employees/getStatisticsByGender - retorna a média, max e min salário por sexo
+- post   /employees - adciona um funcionário, passando no body
+- delete /employees/id - deleta um funcionário pelo id
+
+--dev
+1. roda no banco de dados informado no test;
+2. foi usada a tabela: result_test_guilherme, pois era a que tinha todas as informações do teste, e também não consegui criar uma tabela no bd;
+3. os caminhos são os mesmos, porém deve trocar o /employees por /employees2
+
+**ver figuras
+
+## Figuras
+- get    /employees2
+
+![alt text](image.png)
+
+- get /employees2/countEmployeesByGender
+
+![alt text](image-1.png)
+
+- get /employees2/getBirthYearStatisticsByGender
+
+![alt text](image-2.png)
+
+- get /employees2/getStatisticsByGender
+
+![alt text](image-3.png)
